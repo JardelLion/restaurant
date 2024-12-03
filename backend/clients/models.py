@@ -13,7 +13,7 @@ class Client(models.Model):
     phone = models.CharField(max_length=15, blank=True, null=True)
     send_notification = models.BooleanField(default=False)
     address = models.TextField(blank=True, null=True)
-    birthday = models.DateTimeField(null=False)
+    birthday = models.DateTimeField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
