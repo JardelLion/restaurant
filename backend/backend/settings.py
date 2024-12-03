@@ -27,9 +27,12 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS = ['restaurant-xm7h.onrender.com', 'localhost', '127.0.0.1', '[::1]',
+ALLOWED_HOSTS = ['restaurant-xm7h.onrender.com', 'localhost', 
+                 '127.0.0.1', '[::1]',
                  
-        'http://localhost:5173']
+                'http://localhost:5173',
+                'https://bolt.new/~/sb1-xntfhn'
+]
 
 
 
@@ -133,7 +136,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 # accept only the port 3000
 CORS_ALLOWED_ORIGINS = [
     'restaurant-xm7h.onrender.com',
-    'http://localhost:5173'
+    'http://localhost:5173',
+    'https://bolt.new/~/sb1-xntfhn'
 ]
 
 
