@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'orders',
     'clients',
+    "corsheaders", 
     
 ]
 
@@ -56,6 +57,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",  # Adicione esta linha
+    "django.middleware.common.CommonMiddleware",
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -123,6 +126,31 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+
+# accept only the port 3000
+CORS_ALLOWED_ORIGINS = [
+    'restaurant-xm7h.onrender.com',
+    'http://localhost:5173'
+]
+
+
+# allow the specific method to use
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'DELETE',
+    'OPTIONS',
+    "PATCH",
+]
+
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'authorization',
+]
 
 
 # Static files (CSS, JavaScript, Images)
