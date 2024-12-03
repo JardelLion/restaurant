@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['restaurant-xm7h.onrender.com', 'localhost', '127.0.0.1', '[::1]',
                  
-        'http://localhost:3000']
+        'http://localhost:5173']
 
 
 
@@ -83,8 +83,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'restaurantdb_ky8o',
+        'USER': 'restaurantdb_ky8o_user',
+        'PASSWORD': 'gcrrtEDBODHIbgFhNuCV4m3sAKZ78zac',
+        'HOST': 'dpg-ct7lf723esus73b6tja0-a.oregon-postgres.render.com',
+        'PORT': '5432',  # Porta padrão para PostgreSQL
     }
 }
 
